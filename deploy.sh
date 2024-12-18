@@ -12,8 +12,8 @@ echo "Instalando dependencias de Composer..."
 composer install --no-dev --optimize-autoloader
 
 # Ejecutar migraciones
-echo "Ejecutando migraciones..."
-php artisan migrate --force
+
+php artisan db:seed
 
 
 
@@ -39,5 +39,5 @@ chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 php artisan serve --host=0.0.0.0 --port=10000
 
 # Iniciar el servidor PHP-FPM y Nginx si no está en ejecución
-php-fpm & 
+php-fpm &
 nginx -g "daemon off;"
