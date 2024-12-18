@@ -13,7 +13,6 @@ composer install --no-dev --optimize-autoloader
 
 # Ejecutar migraciones
 
-php artisan db:seed
 
 
 
